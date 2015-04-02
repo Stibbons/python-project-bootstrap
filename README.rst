@@ -2,9 +2,14 @@
 Python Project Bootstrap (PPB)
 ##############################
 
-.. image:: https://travis-ci.org/Stibbons/python-project-bootstrap.svg
-    :target: https://travis-ci.org/Stibbons/python-project-bootstrap
-    :align: left
+.. image:: https://badge.fury.io/py/python-project-bootstrap.png
+    :target: http://badge.fury.io/py/python-project-bootstrap
+
+.. image:: https://travis-ci.org/Stibbons/python-project-bootstrap.png?branch=master
+        :target: https://travis-ci.org/Stibbons/python-project-bootstrap
+
+.. image:: https://coveralls.io/repos/Stibbons/python-project-bootstrap/badge.png?branch=master
+        :target: https://coveralls.io/r/Stibbons/python-project-bootstrap
 
 Bootstrap your Python project, let PPB adds its install scripts and plugin in your project.
 
