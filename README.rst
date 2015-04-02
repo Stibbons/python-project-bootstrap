@@ -2,6 +2,10 @@
 Python Project Bootstrap (PPB)
 ##############################
 
+.. image:: https://travis-ci.org/Stibbons/python-project-bootstrap.svg
+    :target: https://travis-ci.org/Stibbons/python-project-bootstrap
+    :align: right
+
 Bootstrap your Python project, let PPB adds its install scripts and plugin in your project.
 
 This is *not* a build system such as ``scons``. The intend of PPB is to solve the bootstrapping of
