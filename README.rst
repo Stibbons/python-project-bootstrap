@@ -11,6 +11,21 @@ Python Project Bootstrap (PPB)
 .. image:: https://coveralls.io/repos/Stibbons/python-project-bootstrap/badge.png?branch=master
         :target: https://coveralls.io/r/Stibbons/python-project-bootstrap
 
+.. image:: https://img.shields.io/coveralls/Stibbons/python-project-bootstrap.svg
+    :target: https://coveralls.io/r/Stibbons/python-project-bootstrap
+
+.. image:: https://img.shields.io/travis/Stibbons/python-project-bootstrap/master.svg
+    :target: https://travis-ci.org/Stibbons/python-project-bootstrap
+
+.. image:: https://pypip.in/version/python-project-bootstrap/badge.svg
+    :target: https://pypi.python.org/pypi/python-project-bootstrap
+
+.. image:: https://pypip.in/py_versions/python-project-bootstrap/badge.svg
+    :target: https://pypi.python.org/pypi/python-project-bootstrap/
+
+.. image:: https://pypip.in/download/python-project-bootstrap/badge.svg
+    :target: https://pypi.python.org/pypi/python-project-bootstrap/
+
 Bootstrap your Python project, let PPB adds its install scripts and plugin in your project.
 
 This is *not* a build system such as ``scons``. The intend of PPB is to solve the bootstrapping of
