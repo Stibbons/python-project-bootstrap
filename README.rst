@@ -1,11 +1,10 @@
-.. image:: https://travis-ci.org/Stibbons/python-project-bootstrap.svg
-    :target: https://travis-ci.org/Stibbons/python-project-bootstrap
-    :align: right
-
 ##############################
 Python Project Bootstrap (PPB)
 ##############################
 
+.. image:: https://travis-ci.org/Stibbons/python-project-bootstrap.svg
+    :target: https://travis-ci.org/Stibbons/python-project-bootstrap
+    :align: left
 
 Bootstrap your Python project, let PPB adds its install scripts and plugin in your project.
 
