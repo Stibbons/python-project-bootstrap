@@ -1,0 +1,22 @@
+# Multi os support is currenly in beta and not enabled by default
+# os:
+#   - linux
+#   - osx
+
+language: python
+
+python:
+  - "2.6"
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "nightly"
+
+install:
+  - "pip install --upgrade pip"
+  - "pip install virtualenv"
+
+script:
+  - "install/install.py"
+  - "source workdir/bin/activate && trial squirrel"
+  - "source workdir/bin/activate && trial squirrel_integration_tests"
