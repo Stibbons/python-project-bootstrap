@@ -2,20 +2,17 @@
 Python Project Bootstrap (PPB)
 ##############################
 
-.. image:: https://badge.fury.io/py/python-project-bootstrap.png
-    :target: http://badge.fury.io/py/python-project-bootstrap
-
 .. image:: https://travis-ci.org/Stibbons/python-project-bootstrap.png?branch=master
         :target: https://travis-ci.org/Stibbons/python-project-bootstrap
 
-.. image:: https://coveralls.io/repos/Stibbons/python-project-bootstrap/badge.png?branch=master
-        :target: https://coveralls.io/r/Stibbons/python-project-bootstrap
+.. image:: https://img.shields.io/travis/Stibbons/python-project-bootstrap/master.svg
+    :target: https://travis-ci.org/Stibbons/python-project-bootstrap
 
 .. image:: https://img.shields.io/coveralls/Stibbons/python-project-bootstrap.svg
     :target: https://coveralls.io/r/Stibbons/python-project-bootstrap
 
-.. image:: https://img.shields.io/travis/Stibbons/python-project-bootstrap/master.svg
-    :target: https://travis-ci.org/Stibbons/python-project-bootstrap
+.. image:: https://badge.fury.io/py/python-project-bootstrap.png
+    :target: http://badge.fury.io/py/python-project-bootstrap
 
 .. image:: https://pypip.in/version/python-project-bootstrap/badge.svg
     :target: https://pypi.python.org/pypi/python-project-bootstrap
