@@ -59,8 +59,11 @@ def run(cmd, cwd=None, shell=False):
 
 
 def runAsRoot(cmd, cwd=None, shell=False):
-    cmd = ['sudo'] + cmd
-    printRootCmd("{0}".format(" ".join(cmd)))
+    if os.geteuid() != 0:
+        cmd = ['sudo'] + cmd
+        printRootCmd("{0}".format(" ".join(cmd)))
+    else:
+        printCmd("(already root) {0}".format(" ".join(cmd)))
     subprocess.check_call(cmd, shell=shell, cwd=cwd)
 
 

@@ -17,4 +17,4 @@ install:
   - "pip install virtualenv"
 
 script:
-  - "install/install.py"
+  - "sudo install/install.py"
