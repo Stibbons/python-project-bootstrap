@@ -26,7 +26,7 @@ class Main(object):
                             help='Suppress output')
         parser.add_argument('-v', '--verbose', action='store_true', default=False,
                             help='Enable additional output')
-        parser.add_argument('-V', '--version', action='version', version=version.version)
+        parser.add_argument('-V', '--version', action='version', version=version.__version__)
 
         subparser = parser.add_subparsers(title='Subcommands', description='Subcommands')
 
