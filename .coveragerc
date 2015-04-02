@@ -1,3 +1,6 @@
+[run]
+source = ppb
+
 [report]
 omit =
     */python?.?/*
