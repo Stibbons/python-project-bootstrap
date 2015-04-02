@@ -16,9 +16,14 @@ python:
 install:
   - "pip install --upgrade pip"
   - "pip install virtualenv"
+  - "pip install coverage coveralls nose responses"
 
 script:
   - "sudo install/install.py"
   - "ppb --version"
   - "ppb --help"
   - "ppb info --help"
+  - "nosetests --with-coverage --cover-package=ppb"
+
+after_success:
+  - coveralls
