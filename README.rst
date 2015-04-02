@@ -84,7 +84,7 @@ Bootstraping a project usually involve the following step:
 Command line tool
 #################
 
-You can install the command line tool directly through pip:
+You can install the command line tool directly through pip::
 
     pip install ppb
 
@@ -93,6 +93,14 @@ modifying the bootstrap files of your project.
 
 Of course, this command line tool includes many dependencies, uses lot of packages from pypi. But
 its dependencies will not be needed for the scripts generated in your project.
+
+You can bootstrap a new project with the following command::
+
+    ppb bootstrap
+
+Get information about your current installation with::
+
+    ppb info
 
 
 Plugins
