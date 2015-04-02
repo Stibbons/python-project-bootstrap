@@ -41,3 +41,5 @@ class Main(object):
 
         cmd = opts.subcommand
         cmd.options = opts
+
+        cmd.execute()

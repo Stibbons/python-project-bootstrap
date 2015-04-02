@@ -21,3 +21,4 @@ script:
   - "sudo install/install.py"
   - "ppb --version"
   - "ppb --help"
+  - "ppb info --help"

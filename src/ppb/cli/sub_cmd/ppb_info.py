@@ -17,3 +17,6 @@ class PpbInfo(SubCommand):
                             required=False,
                             action="store_true",
                             dest="blabl")
+
+    def execute(self):
+        raise Exception("TODO: ppb info")
