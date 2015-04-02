@@ -3,27 +3,29 @@
 # Beware:
 #  - this script is executed using the system's python, so with not easy control on which
 #    packages are available. Same, we cannot directly install new ones using pip.
-#  - the role of the first stage of this installer is just to install a fresh new virtualenv
-#    with a *controled* version of python, pip and virtualenv, and launch the second part of
-#    the installer, 'install-stage2.py', which will run in the virtualenv.
 
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+####################################################################################################
+# Default settings
 
 settings = {
     'requires_root': True,
 }
 
+####################################################################################################
+# Imports
+
 import os
 import subprocess
 import sys
-
 # Do *not* use optparse or argparse here, we are not sure on which version of python we are!
 
-do_virtualenv = True
 
+####################################################################################################
+# Log function
 
 def printNewSection(char):
     print(char * 79)
@@ -34,7 +36,7 @@ def printInfo(text):
 
 
 def printError(text):
-    print("[ERROR   ] " + text)
+    print("[ERROR   ] " + text, file=sys.stderr)
 
 
 def printCmd(text):
@@ -67,6 +69,9 @@ def runAsRoot(cmd, cwd=None, shell=False):
     subprocess.check_call(cmd, shell=shell, cwd=cwd)
 
 
+####################################################################################################
+# run external tools methods
+
 def call(cmd, cwd=None, shell=False):
     printCmd("{0}".format(" ".join(cmd)))
     return subprocess.call(cmd, shell=shell, cwd=cwd)
@@ -84,10 +89,16 @@ def runAsRootIfNeeded(cmd, cwd=None, shell=False):
         run(cmd, cwd=cwd, shell=shell)
 
 
+####################################################################################################
+# print usage to the user
+
 def usage():
     print("Usage: ./install/install.sh [-l|-d|-b|-h]")
     print("")
     print("Uninstall with './install/uninstall.py'")
+
+####################################################################################################
+# parse command line
 
 action = "none"
 
@@ -106,6 +117,9 @@ else:
 
 if sys.version_info < (2, 6):
     raise "must use python 2.7.x. Current version is: {}.".format(sys.version_info)
+
+####################################################################################################
+# execute actions
 
 
 printNewSection("=")
