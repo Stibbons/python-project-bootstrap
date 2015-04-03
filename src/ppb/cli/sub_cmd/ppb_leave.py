@@ -4,12 +4,12 @@ from __future__ import print_function
 
 from ppb.cli.sub_cmd._sub_command import SubCommand
 
-__all__ = ['PpbInfo']
+__all__ = ['PpbLeave']
 
 
-class PpbInfo(SubCommand):
-    name = "info"
-    help = "information about your current project"
+class PpbLeave(SubCommand):
+    name = "leave"
+    help = "remove PPB capability in your project"
 
     def addParser(self, parser):
         parser.add_argument("--blabla",
