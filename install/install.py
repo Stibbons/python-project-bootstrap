@@ -25,34 +25,80 @@ import sys
 
 
 ####################################################################################################
-# Log function
+# Utility functions
+####################################################################################################
+
+####################################################################################################
+# Color terminal
+
+class bcolors(object):
+    HEADER = '\033[95m'
+    OKBLUE = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    BOOT = '\033[94m'
+
+    ENDC = '\033[0m'
+
+# Do *not* use color when:
+#  - on windows
+#  - not in a terminal except if we are in Travis CI
+if sys.platform.startswith('win32') or (not os.environ.get("TRAVIS") and not sys.stdout.isatty()):
+    bcolors.HEADER = ''
+    bcolors.OKBLUE = ''
+    bcolors.OKGREEN = ''
+    bcolors.WARNING = ''
+    bcolors.FAIL = ''
+    bcolors.BOLD = ''
+    bcolors.UNDERLINE = ''
+
+    bcolors.ENDC = ''
+
+####################################################################################################
+# Log functions
+
+
+def flush():
+    sys.stdout.flush()
+    sys.stderr.flush()
+
 
 def printNewSection(char):
-    print(char * 79)
+    print(bcolors.OKBLUE + char * 79)
+    flush()
 
 
 def printInfo(text):
-    print("[INFO    ] " + text)
+    print(bcolors.OKBLUE + bcolors.OKBLUE + "[INFO    ] " + bcolors.ENDC + text)
+    flush()
 
 
 def printError(text):
-    print("[ERROR   ] " + text, file=sys.stderr)
+    print(bcolors.FAIL + "[ERROR   ] " + bcolors.ENDC + text, file=sys.stderr)
+    flush()
 
 
 def printCmd(text):
-    print("[CMD     ] " + text)
+    print(bcolors.OKGREEN + "[CMD     ] " + bcolors.ENDC + text)
+    flush()
 
 
 def printRootCmd(text):
-    print("[ROOT CMD] " + text)
+    print(bcolors.OKGREEN + "[ROOT CMD] " + bcolors.ENDC + text)
+    flush()
 
 
 def printCmdBg(text):
-    print("[CMD (bg)] " + text)
+    print(bcolors.OKGREEN + "[CMD (bg)] " + bcolors.ENDC + text)
+    flush()
 
 
 def printDetail(text):
-    print("[DETAIL  ] " + text)
+    print(bcolors.HEADER + "[DETAIL  ] " + bcolors.ENDC + text)
+    flush()
 
 
 def run(cmd, cwd=None, shell=False):
@@ -117,6 +163,7 @@ else:
 
 if sys.version_info < (2, 6):
     raise "must use python 2.7.x. Current version is: {}.".format(sys.version_info)
+
 
 ####################################################################################################
 # execute actions
